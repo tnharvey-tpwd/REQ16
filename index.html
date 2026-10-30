@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A locally stored, non-diagnostic Recovery Experience Questionnaire assessment.">
+  <title>Recovery Experience Questionnaire</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#assessment">Skip to assessment</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Personal recovery reflection</p>
+      <h1>Recovery Experience Questionnaire</h1>
+      <p class="lede">Reflect on how you unwind and recuperate during your time after work.</p>
+    </div>
+  </header>
+
+  <main class="container" id="main-content">
+    <section class="card intro" aria-labelledby="instructions-title">
+      <h2 id="instructions-title">Instructions</h2>
+      <p>For each statement, select the response that best describes your time after work.</p>
+      <div class="scale-key" aria-label="Response scale">
+        <span><strong>1</strong> I do not agree at all</span>
+        <span><strong>2</strong> I somewhat disagree</span>
+        <span><strong>3</strong> Neither agree nor disagree</span>
+        <span><strong>4</strong> I somewhat agree</span>
+        <span><strong>5</strong> I fully agree</span>
+      </div>
+      <p class="privacy-note"><strong>Privacy:</strong> Your responses and results stay in this browser using local storage. Nothing is transmitted by this site.</p>
+    </section>
+
+    <noscript>
+      <p class="notice error">JavaScript is required to complete and score this assessment.</p>
+    </noscript>
+
+    <form id="assessment" class="assessment" novalidate>
+      <div id="questions"></div>
+
+      <div id="form-message" class="notice error" role="alert" hidden></div>
+
+      <div class="actions">
+        <button class="button primary" type="submit">Calculate my results</button>
+        <button class="button secondary" id="save-progress" type="button">Save progress</button>
+        <button class="button text-button" id="clear-data" type="button">Clear local data</button>
+      </div>
+    </form>
+
+    <section id="results" class="card results" aria-labelledby="results-title" tabindex="-1" hidden>
+  <div class="results-heading">
+    <div>
+      <p class="eyebrow">Your recovery profile</p>
+      <h2 id="results-title">Results</h2>
+    </div>
+    <p id="completed-date" class="completed-date"></p>
+  </div>
+
+  <p>Each score is the mean of four responses and ranges from 1 to 5. Higher scores indicate more of that recovery experience.</p>
+
+  <!-- JS will render the two grouped boxes here -->
+  <div id="score-cards" class="group-grid"></div>
+
+  <div class="results-actions">
+    <button class="button secondary" id="print-results" type="button">Print results</button>
+    <button class="button text-button" id="retake" type="button">Retake assessment</button>
+  </div>
+
+  <p class="disclaimer"><strong>Important:</strong> This questionnaire is intended for reflection, education, or research. It is not a clinical diagnostic tool and does not evaluate job performance.</p>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Attribution:</strong> Recovery Experience Questionnaire developed by Sabine Sonnentag and Charlotte Fritz.</p>
+      <p>Sonnentag, S., &amp; Fritz, C. (2007). The Recovery Experience Questionnaire: Development and validation of a measure for assessing recuperation and unwinding from work. <em>Journal of Occupational Health Psychology, 12</em>(3), 204–221. <a href="https://doi.org/10.1037/1076-8998.12.3.204" rel="noopener noreferrer">View the publication DOI</a>.</p>
+      <p>This implementation is intended for attributed, non-commercial use.</p>
+    </div>
+  </footer>
+</body>
+</html>
