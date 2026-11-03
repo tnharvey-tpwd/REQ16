@@ -48,7 +48,7 @@ main { margin-top: -2rem; padding-bottom: 4rem; }
 .card { padding: clamp(1.25rem, 3vw, 2rem); }
 .intro h2, .results h2 { margin-top: 0; }
 .scale-key { display: grid; grid-template-columns: repeat(5, 1fr); gap: .75rem; margin: 1.25rem 0; }
-.scale-key span { background: var(--sky); border-radius: 10px; padding: .75rem; font-size: .88rem; }
+.scale-key span { background: var(--sky); border-radius: 10px; padding: .75rem; font-size: .88rem; text-algin: center; }
 .scale-key strong { display: block; color: var(--blue-dark); font-size: 1.15rem; }
 .privacy-note { color: var(--muted); margin-bottom: 0; }
 
